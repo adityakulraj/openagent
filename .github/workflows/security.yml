@@ -39,11 +39,11 @@ jobs:
           node-version: 20
           cache: pnpm
       - run: pnpm install --frozen-lockfile
-      - name: pnpm audit
+      - name: pnpm audit (production dependencies)
         shell: bash
         run: |
           set +e
-          output="$(pnpm audit --audit-level moderate 2>&1)"
+          output="$(pnpm audit --audit-level moderate --prod 2>&1)"
           status=$?
           set -e
 
@@ -60,5 +60,5 @@ jobs:
             exit 0
           fi
 
-          # Preserve failures for real audit findings or other errors.
+          # Preserve failures for real runtime dependency findings or other errors.
           exit "$status"

@@ -145,7 +145,7 @@ Then configure the Ollama endpoint/model in OAgent settings.
 | `pnpm build` | Production build for Electron + renderer |
 | `pnpm start` | Launch packaged app entry locally |
 | `pnpm dist` | Build distributables via electron-builder |
-| `./scripts/oss-check.sh` | Typecheck, build, audit, and basic secret scan |
+| `./scripts/oss-check.sh` | Typecheck, build, runtime dependency audit, secret scan, private path guard, required OSS file check |
 
 ## Repository Structure
 
@@ -181,6 +181,7 @@ Do not open public security issues.
 - [`SUPPORT.md`](SUPPORT.md) for support expectations
 - [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md) for community guidelines
 - [`MAINTAINERS.md`](MAINTAINERS.md) for maintainer contacts
+- [`docs/open-source-readiness.md`](docs/open-source-readiness.md) for pre-public checklist
 
 ## License
 
